@@ -9,15 +9,27 @@ hand landmarks and gestures.
 ## Table of Contents
 
 * [Introduction](#introduction)
+* [Key Features](#key-features)
 * [Usage](#usage)
 * [Methods](#methods)
 * [Examples](#examples)
-* [Key Features](#key-features)
 * [License](#license)
 
 ## Introduction
 
 The `handDetector` class in this module provides methods to perform hand detection and finger counting using the Mediapipe library. It can identify the orientation of the hand (front or back) and count the number of fingers being held up.
+
+## Key Features
+
+- Accurate hand detection and landmark localization using the `MediaPipe` library.
+- Differentiates between left and right hands, considering their orientation (front or back).
+- Detects open and closed fingers, making it suitable for gesture recognition.
+- Calculates distances between hand landmarks for more advanced applications.
+- Seamless integration with various projects such as robotics, gaming, and interactive multimedia.
+
+The module comes with an intuitive API that allows you to easily extract hand landmarks, determine finger gestures, and identify the orientation of the hand. Whether you're a developer, researcher, or hobbyist, this module is a valuable tool for implementing hand-related functionalities in your projects.
+
+Get started today by integrating the Hand Detection Module into your Python applications. Enhance your projects with accurate hand detection and unlock a new level of interactivity and control.
 
 ## Usage
 
@@ -26,7 +38,9 @@ To use the `handDetector` module, you need to have Python and the required libra
 ```bash
 pip install opencv-python mediapipe
 ```
+
 ## Methods
+
 The `handDetector` class provides the following methods:
 - `findHands(image, draw=True)`: Finds and marks hands in the given image.
 - `findPosition(image, handNo=0)`: Finds the landmarks' positions of a specific hand.
@@ -36,6 +50,7 @@ The `handDetector` class provides the following methods:
 - `identifyHand(image, flip=False, handNo=0)`: Identifies the orientation of the hand (front or back).
 
 ## Examples
+
 ```python
 import cv2
 from handDetectionMudule import handDetector
@@ -58,17 +73,6 @@ fingers = detector.getFingers(hands_with_landmarks)
 print(orientation, hand, "Hand")
 print("Fingers:", fingers)
 ```
-
-## Key Features
-- Accurate hand detection and landmark localization using the MediaPipe library.
-- Differentiates between left and right hands, considering their orientation (front or back).
-- Detects open and closed fingers, making it suitable for gesture recognition.
-- Calculates distances between hand landmarks for more advanced applications.
-- Seamless integration with various projects such as robotics, gaming, and interactive multimedia.
-
-The module comes with an intuitive API that allows you to easily extract hand landmarks, determine finger gestures, and identify the orientation of the hand. Whether you're a developer, researcher, or hobbyist, this module is a valuable tool for implementing hand-related functionalities in your projects.
-
-Get started today by integrating the Hand Detection Module into your Python applications. Enhance your projects with accurate hand detection and unlock a new level of interactivity and control.
 
 ## License
 
